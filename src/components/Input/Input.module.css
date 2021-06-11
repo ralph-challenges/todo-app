@@ -1,0 +1,30 @@
+.input {
+  width: 100%;
+  padding: 20px 23px;
+  padding-left: 53px;
+  border: none;
+  border-radius: 5px;
+}
+
+.input::placeholder {
+  color: var(--placeholder-color);
+}
+
+.form {
+  position: relative;
+}
+
+.form::before {
+  position: absolute;
+  content: '';
+  width: 20px;
+  height: 20px;
+
+  border-radius: 50%;
+  border: solid 2px #E8E8EA;
+
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+}
+

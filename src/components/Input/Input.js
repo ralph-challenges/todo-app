@@ -1,15 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function Input({ handleOnSubmit, textInput }) {
+import styles from './Input.module.css';
+
+export default function Input({ handleOnSubmit, textInputRef }) {
   return (
-    <form onSubmit={handleOnSubmit}>
-      <input ref={textInput} />
+    <form className={styles.form} onSubmit={handleOnSubmit}>
+      <input
+        placeholder='Create a new todo...'
+        className={styles.input}
+        ref={textInputRef}
+      />
     </form>
   );
 }
 
 Input.propTypes = {
   handleOnSubmit: PropTypes.func.isRequired,
-  textInput: PropTypes.shape({ current: PropTypes.elementType }).isRequired,
+  textInputRef: PropTypes.shape({
+    current: PropTypes.shape({
+      value: PropTypes.string,
+    }),
+  }).isRequired,
 };

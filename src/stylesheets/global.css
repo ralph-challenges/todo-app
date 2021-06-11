@@ -1,0 +1,14 @@
+@import url('https://fonts.google.com/specimen/Josefin+Sans');
+
+:root {
+	--bg-image: url('../images/bg-mobile-dark.jpg');
+	--title-color: #ffffff;
+	--placeholder-color: #A8A6B1;
+}
+
+body {
+	background-image: var(--bg-image);
+	background-size: coveru;
+	background-repeat: no-repeat;
+	font-family: 'Josefin Sans', sans-serif;
+}

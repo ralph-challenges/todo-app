@@ -2,11 +2,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 35px;
 }
 
 .title {
   font-size: 32px;
+  letter-spacing: 11px;
   text-transform: uppercase;
+  color: var(--title-color);
 }
 
 .icon {}

@@ -6,27 +6,27 @@ import Input from '../Input';
 import styles from './App.module.css';
 
 export default function App() {
-  const textInput = useRef(null);
+  const textInputRef = useRef(null);
   const [todos, setTodos] = useState([]);
 
   function handleOnSubmit(event) {
     event.preventDefault();
 
     const newTodo = {
-      value: textInput.current.value,
+      value: textInputRef.current.value,
       completed: false,
       key: Date.now(),
     };
     const newTodos = [...todos, newTodo];
 
     setTodos(newTodos);
-    textInput.current.value = '';
+    textInputRef.current.value = '';
   }
 
   return (
     <div className={styles.container}>
       <Header />
-      <Input textInput={textInput} handleOnSubmit={handleOnSubmit} />
+      <Input textInputRef={textInputRef} handleOnSubmit={handleOnSubmit} />
 
       <ul>
         {todos.map(({ value, key }) => (
