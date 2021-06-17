@@ -2,13 +2,24 @@
 
 :root {
 	--bg-image: url('../images/bg-mobile-dark.jpg');
+	--body-background-color: #F6F6F8;
+
 	--title-color: #ffffff;
 	--placeholder-color: #A8A6B1;
+
+	--bg-list: white;
+  --border-color-list-item: #E6E5EA;
+	--border-color-radio-check: #E8E8EA;
+
+	--color-list: #7A7A85;
+	--list-dashed-color: #BEBDC2;
 }
 
 body {
+	background-size: contain;
 	background-image: var(--bg-image);
-	background-size: coveru;
+	background-color: var(--body-background-color);
 	background-repeat: no-repeat;
+
 	font-family: 'Josefin Sans', sans-serif;
 }

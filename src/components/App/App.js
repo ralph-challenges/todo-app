@@ -2,12 +2,15 @@ import React, { useState, useRef } from 'react';
 
 import Header from '../Header';
 import Input from '../Input';
+import ListItems from '../ListItems';
 
 import styles from './App.module.css';
 
 export default function App() {
   const textInputRef = useRef(null);
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState([
+    { value: 'Go to the mall', completed: false, key: Date.now() },
+  ]);
 
   function handleOnSubmit(event) {
     event.preventDefault();
@@ -27,12 +30,7 @@ export default function App() {
     <div className={styles.container}>
       <Header />
       <Input textInputRef={textInputRef} handleOnSubmit={handleOnSubmit} />
-
-      <ul>
-        {todos.map(({ value, key }) => (
-          <li key={key}>{value}</li>
-        ))}
-      </ul>
+      <ListItems todos={todos} />
     </div>
   );
 }
