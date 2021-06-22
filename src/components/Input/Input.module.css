@@ -7,7 +7,7 @@
 }
 
 .input::placeholder {
-  color: var(--placeholder-color);
+  color: var(--input-placeholder-color);
 }
 
 .form {
@@ -22,7 +22,7 @@
   height: 20px;
 
   border-radius: 50%;
-  border: solid 1px var(--border-color-radio-check);
+  border: solid 1px var(--radio-border-color);
 
   left: 23px;
   top: 50%;

@@ -1,0 +1,37 @@
+.checkbox {
+  display: none;
+}
+
+.checkbox:checked + .label:before {
+  background-image: url(../../images/icon-check.svg),
+    linear-gradient(149deg, rgba(111,190,246,1) 20%, rgba(155,137,245,1) 39%);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.checkbox:checked + .label {
+  color: var(--list-item-dashed-color);
+  text-decoration: line-through;
+}
+
+.label {
+  position: relative;
+  flex: 1;
+  padding: 20px 23px;
+  padding-left: 55px;
+  color: var(--list-item-color);
+}
+
+.label:before {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+
+  border-radius: 50%;
+  border: solid 1px var(--radio-border-color);
+
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+}

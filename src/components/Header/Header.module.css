@@ -9,7 +9,7 @@
   font-size: 32px;
   letter-spacing: 11px;
   text-transform: uppercase;
-  color: var(--title-color);
+  color: var(--page-title-color);
 }
 
 .icon {}

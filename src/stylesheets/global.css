@@ -1,25 +1,42 @@
-@import url('https://fonts.google.com/specimen/Josefin+Sans');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap');
 
 :root {
-	--bg-image: url('../images/bg-mobile-dark.jpg');
-	--body-background-color: #F6F6F8;
+	/* Light Theme */
+	--veryLightGray: hsl(0, 0%, 98%);
+	--veryLightGrayishBlue: hsl(236, 33%, 92%);
+	--lightGrayishBlue: hsl(233, 11%, 84%);
+	--darkGrayishBlue: hsl(236, 9%, 61%);
+	--veryDarkGrayishBlue: hsl(235, 19%, 35%);
 
-	--title-color: #ffffff;
-	--placeholder-color: #A8A6B1;
+	/* COMPONENTS */
+	--body-image: url('../images/bg-mobile-dark.jpg');
+	--body-bg: var(--veryLightGrayishBlue);
 
-	--bg-list: white;
-  --border-color-list-item: #E6E5EA;
-	--border-color-radio-check: #E8E8EA;
+	--page-title-color: #ffffff;
 
-	--color-list: #7A7A85;
-	--list-dashed-color: #BEBDC2;
+	--input-placeholder-color: var(--lightGrayishBlue);
+
+	/* List items */
+	--list-bg: #ffffff;
+	--list-color-empty: var(--darkGrayishBlue);
+
+	/* List item */
+  --list-item-border-color: var(--veryLightGrayishBlue);
+	--list-item-dashed-color: var(--veryLightGrayishBlue);
+	--list-item-color: var(--darkGrayishBlue);
+
+	/* radio component */
+	--radio-border-color: var(--veryLightGrayishBlue);
+
+	/* button component? */
+	--clear-button-color: var(--lightGrayishBlue);
 }
 
 body {
-	background-size: contain;
-	background-image: var(--bg-image);
-	background-color: var(--body-background-color);
+	background-color: var(--body-bg);
+	background-image: var(--body-image);
 	background-repeat: no-repeat;
+	background-size: contain;
 
 	font-family: 'Josefin Sans', sans-serif;
 }

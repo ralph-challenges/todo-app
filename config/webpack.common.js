@@ -22,7 +22,11 @@ module.exports = {
             loader: 'css-loader',
             options: {
               importLoaders: 1,
-              modules: true,
+              modules: {
+                compileType: 'module',
+                auto: true,
+                localIdentName: '[name]__[local]--[hash:base64:5]',
+              },
             },
           },
         ],
