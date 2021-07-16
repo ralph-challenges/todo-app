@@ -8,28 +8,46 @@
 	--darkGrayishBlue: hsl(236, 9%, 61%);
 	--veryDarkGrayishBlue: hsl(235, 19%, 35%);
 
-	/* COMPONENTS */
-	--body-image: url('../images/bg-mobile-dark.jpg');
+	--body-image: url('../images/bg-mobile-light.jpg');
 	--body-bg: var(--veryLightGrayishBlue);
 
-	--page-title-color: #ffffff;
-
-	--input-placeholder-color: var(--lightGrayishBlue);
+	/* COMPONENTS */
+	--input-placeholder-color: var(--darkGrayishBlue);
 
 	/* List items */
 	--list-bg: #ffffff;
 	--list-color-empty: var(--darkGrayishBlue);
-
-	/* List item */
-  --list-item-border-color: var(--veryLightGrayishBlue);
-	--list-item-dashed-color: var(--veryLightGrayishBlue);
-	--list-item-color: var(--darkGrayishBlue);
 
 	/* radio component */
 	--radio-border-color: var(--veryLightGrayishBlue);
 
 	/* button component? */
 	--clear-button-color: var(--lightGrayishBlue);
+}
+
+
+body[data-theme="dark"] {
+	/* variables */
+	--veryDarkDesaturatedBlue: hsl(235, 24%, 19%);
+	/*- Very Dark Blue: hsl(235, 21%, 11%)*/
+	/*- Very Dark Desaturated Blue: hsl(235, 24%, 19%)*/
+	/*- Light Grayish Blue: hsl(234, 39%, 85%)*/
+	/*- Light Grayish Blue (hover): hsl(236, 33%, 92%)*/
+	/*- Dark Grayish Blue: hsl(234, 11%, 52%)*/
+	/*- Very Dark Grayish Blue: hsl(233, 14%, 35%)*/
+
+	--body-image: url('../images/bg-mobile-dark.jpg');
+	--body-bg: var(--veryDarkDesaturatedBlue);
+}
+
+@media (min-width: 600px) {
+	:root {
+		--body-image: url('../images/bg-desktop-light.jpg');
+	}
+
+	body[data-theme="dark"] {
+		--body-image: url('../images/bg-desktop-dark.jpg');
+	}
 }
 
 body {
@@ -40,3 +58,4 @@ body {
 
 	font-family: 'Josefin Sans', sans-serif;
 }
+

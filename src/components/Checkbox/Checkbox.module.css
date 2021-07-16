@@ -1,17 +1,40 @@
+.checkbox + .label:before {
+  --background-checkbox: #fff;
+}
+
+.checkbox:checked + .label:before {
+  --background-checkbox: url(../../images/icon-check.svg),
+    linear-gradient(149deg, rgba(111,190,246,1) 20%, rgba(155,137,245,1) 39%);
+}
+
+.checkbox + .label {
+  --dashed-color: var(--darkGrayishBlue);
+  --text-decoration: none;
+}
+
+.checkbox:checked + .label {
+  --dashed-color: var(--lightGrayishBlue);
+  --text-decoration: line-through;
+}
+
+/* STYLE */
 .checkbox {
   display: none;
 }
 
-.checkbox:checked + .label:before {
-  background-image: url(../../images/icon-check.svg),
-    linear-gradient(149deg, rgba(111,190,246,1) 20%, rgba(155,137,245,1) 39%);
+.checkbox + .label:before {
+  background-image: var(--background-checkbox);
+}
+
+.checkbox + .label:before {
+  background-image: var(--background-checkbox);
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.checkbox:checked + .label {
-  color: var(--list-item-dashed-color);
-  text-decoration: line-through;
+.checkbox + .label {
+  color: var(--dashed-color);
+  text-decoration: var(--text-decoration);
 }
 
 .label {

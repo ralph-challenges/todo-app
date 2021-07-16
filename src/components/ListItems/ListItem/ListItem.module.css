@@ -2,7 +2,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: solid 1px var(--list-item-border-color);
+  border-bottom: solid 1px var(--veryLightGrayishBlue);
+  font-weight: 600;
 }
 
 .list-item:last-of-type {

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import styles from './Checkbox.module.css';
 
-export default function Radio({ label, index }) {
+export default function Checkbox({ label, index }) {
   return (
     <>
       <input
@@ -18,7 +18,7 @@ export default function Radio({ label, index }) {
   );
 }
 
-Radio.propTypes = {
+Checkbox.propTypes = {
   index: PropTypes.number.isRequired,
   label: PropTypes.string.isRequired,
 };

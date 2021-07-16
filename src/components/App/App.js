@@ -1,4 +1,5 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useLayoutEffect } from 'react';
+import cn from 'classnames';
 
 import Header from '../Header';
 import Input from '../Input';
@@ -26,8 +27,10 @@ export default function App() {
     textInputRef.current.value = '';
   }
 
+  const appStyle = cn(['app', styles.container]);
+
   return (
-    <div className={styles.container}>
+    <div data-theme='dark' className={appStyle}>
       <Header />
       <Input textInputRef={textInputRef} handleOnSubmit={handleOnSubmit} />
       <ListItems todos={todos} />

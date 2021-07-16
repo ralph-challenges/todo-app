@@ -9,7 +9,13 @@
   font-size: 32px;
   letter-spacing: 11px;
   text-transform: uppercase;
-  color: var(--page-title-color);
+  color: #ffffff;
+}
+
+.button {
+  appearance: none;
+  background-color: transparent;
+  border: none;
 }
 
 .icon {}
